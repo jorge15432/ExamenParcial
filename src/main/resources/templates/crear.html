@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Modificacion de artistas</title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+       <h1>Datos del artista</h1>
+       <a th:href="@{/}">Regresar</a>
+       <br>
+       <form th:action="@{/save}"
+             method="post"@
+             th:object="${artistas}">
+           <label for="nombre">Nombre:</label>
+           <input type="text" name="nombre" th:field="*{nombre}"/>
+           <br>
+                <label for="apellido1">Apellido1:</label>
+           <input type="text" name="apellido1" th:field="*{apellido1}"/>
+           <br>
+                   <label for="apellido2">Apellido2:</label>
+           <input type="text" name="apellido2" th:field="*{apellido2}"/>
+           <br>
+                    <label for="pais">Pais:</label>
+           <input type="text" name="pais" th:field="*{pais}"/>
+           <br>
+           <input type="submit" name="guardar" value="Guardar"/>
+           </form>
+    </body>
+</html>
+
